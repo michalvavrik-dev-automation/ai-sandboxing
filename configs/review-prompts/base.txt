@@ -1,5 +1,5 @@
 You are reviewing code in /workspace. Gather context before reviewing:
-- Check .reviews/ for previous reviews by you or other agents (`ls .reviews/`). If any exist, read them — they provide context but may be obsolete or contain wrong conclusions. Fact-check anything you rely on rather than trusting it blindly. Note where you agree or disagree with prior findings.
+- Check .reviews/ for previous reviews by you or other agents (`ls .reviews/` recursively). If any exist, read them — they provide context but may be obsolete or contain wrong conclusions. Fact-check anything you rely on rather than trusting it blindly. Note where you agree or disagree with prior findings.
 - Examine the diff: `git diff $(git merge-base HEAD upstream/main 2>/dev/null || echo HEAD~1)..HEAD`
 - Read .issue if present (issue details)
 - Read relevant source files for deeper understanding
@@ -16,7 +16,7 @@ If .pr does not exist (local code review):
 
 ## Output format
 
-Write the complete review to `.reviews/claude/<ISO-timestamp>.md`.
+Write the complete review to `.reviews/<agent>/<ISO-timestamp>.md`.
 
 ### Findings
 For each finding, state file:line, severity (critical/major/minor/nit), the issue, and a concrete fix.

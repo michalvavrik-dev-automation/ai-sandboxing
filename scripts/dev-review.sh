@@ -13,13 +13,13 @@ _devreview_usage() {
     echo '  dev review "follow-up text"     Resume session with follow-up question'
     echo ""
     echo "Options:"
-    echo "  --agent=claude|bob|agy          Agent to use (default: claude)"
+    echo "  --agent=claude|bob|agy          Agent to use (default: agy)"
     echo '  --prompt "text"                 Replace agent-specific prompt (base kept)'
     echo '  --append-to-prompt "text"       Append to default prompt'
     echo "  -h, --help                      Show this help"
 }
 
-_devreview_agent="claude"
+_devreview_agent="agy"
 _devreview_custom_prompt=""
 _devreview_append=""
 _devreview_positional=""

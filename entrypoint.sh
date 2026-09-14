@@ -376,6 +376,9 @@ if [ -n "${DEV_TEMPLATE_KEY:-}" ]; then
 ## Git branches
 You can only push to branches under \`dev-auto/$(hostname)/\`. If you need extra branches, name them \`dev-auto/$(hostname)/<name>\`.
 
+## Git commits
+Never reference any GitHub PR or issue inside a Git commit message. Do not commit changes unless you are asked to.
+
 ## Testing
 Docker is NOT installed. Podman is the container runtime. Testcontainers works with Podman out of the box (already configured via DOCKER_HOST). Always try running tests before claiming they can't run.
 
